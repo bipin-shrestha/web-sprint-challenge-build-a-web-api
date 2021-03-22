@@ -53,4 +53,14 @@ router.delete('/:id', ( req, res ) => {
     });
 });
 
+router.get('/:id/actions', ( req, res ) => {
+    projectModel.getProjectActions(req.params.id)
+    .then(action => {
+        res.status(200).json(action)
+    })
+    .catch(error => {
+        res.status(500).json({ message: 'Error to get the Action Array'})
+    });    
+});
+
 module.exports = router;

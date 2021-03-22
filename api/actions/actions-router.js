@@ -1,6 +1,5 @@
 // Write your "actions" router here!
 const express = require('express');
-
 const actionModel = require('./actions-model.js');
 const router = express.Router();
 
